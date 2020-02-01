@@ -31,22 +31,22 @@ class UserForm extends Component {
 
     getDataFromService = () => {
         const {purpose, capitalEquity, monthlyIncome, monthlyExpenses, sumRegularPayments, monthlySavings, residentialHouseOwner, age} = this.state;
-        this.setState({isLoading: true})
-        // axios.post(` http://localhost:3333/prospects/new`, {
-        //     purpose,
-        //     capitalEquity,
-        //     monthlyIncome,
-        //     monthlyExpenses,
-        //     sumRegularPayments,
-        //     monthlySavings,
-        //     residentialHouseOwner,
-        //     age
-        // }).then((res) => {
-        //         this.setState({
-        //         results: res.data,
-        //         isLoading: false
-        //         })
-        //     })
+        this.setState({isLoading: true});
+        axios.post(` http://localhost:3333/prospects/new`, {
+            purpose,
+            capitalEquity,
+            monthlyIncome,
+            monthlyExpenses,
+            sumRegularPayments,
+            monthlySavings,
+            residentialHouseOwner,
+            age
+        }).then((res) => {
+                this.setState({
+                results: res.data,
+                isLoading: false
+                })
+            })
 
     };
 
