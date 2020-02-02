@@ -3,6 +3,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import {bannerImage} from '../assets';
+import {styles} from "../assets/WizardStyle";
 
 class CapitalEquity extends Component {
 
@@ -21,39 +23,45 @@ class CapitalEquity extends Component {
         return (
             <MuiThemeProvider>
                 <Fragment>
-                    <AppBar title=""/>
-                    <h1>?כמה הון עצמי יש לכם להשקיע</h1>
-                    <br/>
-                    <TextField
-                        style={inputStyle}
-                        // hintText="הון עצמי"
-                        onChange={handleChange('capitalEquity')}
-                        defaultValue={values.capitalEquity}
-                    />
-                    <br/>
-                    <RaisedButton
-                        label="חזור"
-                        primary={false}
-                        style={styles.button}
-                        onClick={this.back}
-                    />
-                    <RaisedButton
-                        label="המשך"
-                        primary={true}
-                        style={styles.button}
-                        onClick={this.continue}
-                    />
+                    <AppBar title="" style={styles.appBar}/>
+                    <div style={styles.welcomeContainer}>
+                        <div style={styles.imageContainer}>
+                            <img src={bannerImage}/>
+                        </div>
+                        <div style={styles.welcomeSection}>
+                            <h1 style={styles.header}>?כמה הון עצמי יש לכם להשקיע</h1>
+                            <br/>
+                            <div style={styles.input}>
+                            <TextField
+                                style={inputStyle}
+                                onChange={handleChange('capitalEquity')}
+                                defaultValue={values.capitalEquity}
+                            />
+                            </div>
+                            <br/>
+                            <div style={styles.purposeContainer}>
+                            <RaisedButton
+                                label="חזור"
+                                labelStyle={styles.buttonColor}
+                                backgroundColor={'#3F3D56'}
+                                style={styles.button}
+                                onClick={this.back}
+                            />
+                            <RaisedButton
+                                label="המשך"
+                                labelStyle={styles.buttonColor}
+                                backgroundColor={'#3F3D56'}
+                                style={styles.button}
+                                onClick={this.continue}
+                            />
+                            </div>
+                        </div>
+                    </div>
                 </Fragment>
             </MuiThemeProvider>
         );
     }
 }
-
-const styles = {
-    button: {
-        margin: 15
-    }
-};
 
 const inputStyle = {
     textAlign: 'right'

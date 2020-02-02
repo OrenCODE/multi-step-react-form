@@ -1,7 +1,14 @@
 .App {
-  text-align: center;
+    text-align: right;
+    background-color: #09B8E2;
+    height: 650px;
+    overflow-y: hidden;
 }
 
 input {
     text-align: right !important;
+}
+
+.MuiRaisedButton-contained {
+    background-color: red;
 }

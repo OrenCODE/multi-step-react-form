@@ -2,6 +2,8 @@ import React, {Component, Fragment} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
+import {bannerImage} from '../assets';
+import {styles} from "../assets/WizardStyle";
 
 class Purpose extends Component {
 
@@ -15,31 +17,36 @@ class Purpose extends Component {
         return (
             <MuiThemeProvider>
                 <Fragment>
-                    <AppBar title=""/>
-                    <h1>?לאיזו מטרה אתם מחפשים דירה</h1>
-                    <br/>
-                    <RaisedButton
-                        label="מגורים"
-                        primary={true}
-                        style={styles.button}
-                        onClick={this.continue("residence")}
-                    />
-                    <RaisedButton
-                        label="השקעה"
-                        primary={true}
-                        style={styles.button}
-                        onClick={this.continue("investment")}
-                    />
+                    <AppBar title="" style={styles.appBar}/>
+                    <div style={styles.welcomeContainer}>
+                        <div style={styles.imageContainer}>
+                            <img src={bannerImage}/>
+                        </div>
+                        <div style={styles.welcomeSection}>
+                            <h1 style={styles.header}>?לאיזו מטרה אתם מחפשים דירה</h1>
+                            <br/>
+                            <div style={styles.purposeContainer}>
+                                <RaisedButton
+                                    label="מגורים"
+                                    labelStyle={styles.buttonColor}
+                                    backgroundColor={'#3F3D56'}
+                                    style={styles.button}
+                                    onClick={this.continue("residence")}
+                                />
+                                <RaisedButton
+                                    label="השקעה"
+                                    labelStyle={styles.buttonColor}
+                                    backgroundColor={'#3F3D56'}
+                                    style={styles.button}
+                                    onClick={this.continue("investment")}
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </Fragment>
             </MuiThemeProvider>
         );
     }
 }
-
-const styles = {
-    button: {
-        margin: 15
-    }
-};
 
 export default Purpose;

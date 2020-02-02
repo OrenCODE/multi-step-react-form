@@ -167,19 +167,11 @@ class UserForm extends Component {
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
                         handleChange={this.handleChange}
+                        getDataFromService={this.getDataFromService}
                         values={values}
                     />
                 );
             case 9:
-                return (
-                    <Confirm
-                        nextStep={this.nextStep}
-                        prevStep={this.prevStep}
-                        values={values}
-                        getDataFromService={this.getDataFromService}
-                    />
-                );
-            case 10:
                 return (
                     <Results results={results}/>
                 );
