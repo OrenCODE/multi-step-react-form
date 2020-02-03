@@ -71,7 +71,6 @@ export const styles = {
         backgroundColor: 'white',
         border: '2px solid #3F3D56',
         display: 'grid',
-        justifyItems: 'center',
         gridTemplateRows: 'auto'
     },
     resultsHeader: {
@@ -80,5 +79,20 @@ export const styles = {
         justifySelf: 'flex-end',
         marginInlineEnd: '30px',
         fontSize: 'larger'
+    },
+    resultsInvestmentContainer: {
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr'
+    },
+    propertyPrice: {
+        display: 'flex',
+        alignSelf: 'end',
+        justifyContent: 'center'
+    },
+    resultsInvestment: {
+        textAlign: 'center'
+    },
+    note: {
+        margin: '30px'
     }
 };

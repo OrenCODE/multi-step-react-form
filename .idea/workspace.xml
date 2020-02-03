@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3190b16a-006f-45c0-9cf8-a36a0afe5e1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/WizardStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/WizardStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Age.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Age.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CapitalEquity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CapitalEquity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MonthlyExpenses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MonthlyExpenses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MonthlyIncome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MonthlyIncome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MonthlySavings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MonthlySavings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Results.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SumRegularPayments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SumRegularPayments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserForm.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580551823774</updated>
-      <workItem from="1580551825141" duration="50182000" />
+      <workItem from="1580551825141" duration="52110000" />
     </task>
     <servers />
   </component>

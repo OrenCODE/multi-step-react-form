@@ -47,12 +47,11 @@ class UserForm extends Component {
             residentialHouseOwner,
             age
         }).then((res) => {
-                this.setState({
+            this.setState({
                 results: res.data,
                 isLoading: false
-                })
             })
-
+        })
     };
 
     nextStep = () => {
@@ -70,9 +69,9 @@ class UserForm extends Component {
     };
 
     handleChange = input => e => {
-        if(e.target.value.length === 0) {
+        if (e.target.value.length === 0) {
             this.setState({[`${input}Error`]: true})
-        }else {
+        } else {
             this.setState({[input]: e.target.value});
             this.setState({[`${input}Error`]: false});
             console.log(this.isNumber(e.target.value));
@@ -80,7 +79,9 @@ class UserForm extends Component {
         }
     };
 
-   isNumber = (n) => { return !isNaN(parseFloat(n)) && !isNaN(n - 0) };
+    isNumber = (n) => {
+        return !isNaN(parseFloat(n)) && !isNaN(n - 0)
+    };
 
     setPurpose = purposeType => {
         this.setState({
@@ -89,7 +90,7 @@ class UserForm extends Component {
     };
 
     setErrors = errorField => {
-        this.setState({[errorField] : true})
+        this.setState({[errorField]: true})
     };
 
     setHouseOwnerStatus = status => {
@@ -101,9 +102,25 @@ class UserForm extends Component {
     render() {
         const {step} = this.state;
         const {capitalEquityError, monthlyIncomeError, monthlyExpensesError, sumRegularPaymentsError, monthlySavingsError, ageError} = this.state;
-        const errors = {capitalEquityError, monthlyIncomeError, monthlyExpensesError, sumRegularPaymentsError, monthlySavingsError, ageError};
+        const errors = {
+            capitalEquityError,
+            monthlyIncomeError,
+            monthlyExpensesError,
+            sumRegularPaymentsError,
+            monthlySavingsError,
+            ageError
+        };
         const {purpose, capitalEquity, monthlyIncome, monthlyExpenses, sumRegularPayments, monthlySavings, residentialHouseOwner, age, results} = this.state;
-        const values = {purpose, capitalEquity, monthlyIncome, monthlyExpenses, sumRegularPayments, monthlySavings, residentialHouseOwner, age};
+        const values = {
+            purpose,
+            capitalEquity,
+            monthlyIncome,
+            monthlyExpenses,
+            sumRegularPayments,
+            monthlySavings,
+            residentialHouseOwner,
+            age
+        };
 
         switch (step) {
             case 0:

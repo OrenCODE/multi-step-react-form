@@ -16,20 +16,31 @@ class Results extends Component {
                             <img src={bannerImage}/>
                         </div>
                         <div style={styles.resultsSection}>
-                            <div style={styles.resultsHeader}>:עפ״י מידע שמסרתם ותוצאות המודל, אתם יכולים לרכוש נכס בסכום של</div>
-                            <h1>{results?.propertyPrice ?? ''}</h1>
+                            <div style={styles.resultsHeader}>:עפ״י מידע שמסרתם ותוצאות המודל, אתם יכולים לרכוש נכס
+                                בסכום של
+                            </div>
+                            <div style={styles.resultsInvestmentContainer}>
+                                <div style={styles.resultsInvestment}>
+                                    <div>סך ההשקעה הצפויה</div>
+                                    <div>{results?.maxPrice ?? '₪ 1,487,400'}</div>
+                                </div>
+                                <h1 style={styles.propertyPrice}>{results?.propertyPrice ?? '₪ 1,340,000'}</h1>
+                            </div>
+                            <div style={styles.note}>.ריכזנו עבורכם את כל הפרטים כדי להמחיש לכם את עלוית רכשית הנכס ולתמוך בקבלת ההחלטה
+                                שלכם
+                            </div>
                             <div style={columns}>
                                 <div style={cardContainer}>
-                                    <div>סך ההשקעה הצפויה</div>
-                                    <h1>{results?.maxPrice ?? ''}</h1>
+                                    <div>עלוית השבחה</div>
+                                    <div>{results?.maxPrice ?? '₪ 14,400'}</div>
                                 </div>
                                 <div style={cardContainer}>
                                     <div>הוצאות רכישה (3%)</div>
-                                    <h3>{results?.capitalEquity ?? ''}</h3>
+                                    <div>{results?.capitalEquity ?? '₪ 40,200'}</div>
                                 </div>
                                 <div style={cardContainer}>
                                     <div>מס רכישה (8%)</div>
-                                    <h3>{results?.tax ?? ''}</h3>
+                                    <h3>{results?.tax ?? '₪ 107,200'}</h3>
                                 </div>
                             </div>
                             <div style={secondContainer}>
