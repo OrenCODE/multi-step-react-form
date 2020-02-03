@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar';
-import TextField from 'material-ui/TextField';
+import CurrencyTextField from '@unicef/material-ui-currency-textfield'
 import RaisedButton from 'material-ui/RaisedButton';
 import {bannerImage} from '../assets';
 import {styles} from "../assets/WizardStyle";
@@ -10,7 +10,11 @@ class SumRegularPayments extends Component {
 
     continue = e => {
         e.preventDefault();
-        this.props.nextStep()
+        if(this.props.values.sumRegularPayments === 0){
+            this.props.setErrors('sumRegularPaymentsError');
+        } else if(!this.props.errors.sumRegularPaymentsError) {
+            this.props.nextStep()
+        }
     };
 
     back = e => {
@@ -19,7 +23,7 @@ class SumRegularPayments extends Component {
     };
 
     render() {
-        const {values, handleChange} = this.props;
+        const {errors, handleChange} = this.props;
         return (
             <MuiThemeProvider>
                 <Fragment>
@@ -32,9 +36,12 @@ class SumRegularPayments extends Component {
                             <h1 style={styles.header}>?כמה הוצאות קבועות יש לכם כל חודש</h1>
                             <br/>
                             <div style={styles.input}>
-                                <TextField
+                                <CurrencyTextField
+                                    minimumValue="0"
+                                    variant="standard"
+                                    currencySymbol="₪"
                                     onChange={handleChange('sumRegularPayments')}
-                                    defaultValue={values.sumRegularPayments}
+                                    helperText={errors.sumRegularPaymentsError ? 'נא הזינו סכום בשקלים': null}
                                 />
                             </div>
                             <br/>

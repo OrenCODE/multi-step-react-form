@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar';
-import TextField from 'material-ui/TextField';
+import CurrencyTextField from '@unicef/material-ui-currency-textfield'
 import RaisedButton from 'material-ui/RaisedButton';
 import {styles} from "../assets/WizardStyle";
 import {bannerImage} from "../assets";
@@ -10,8 +10,11 @@ class Age extends Component {
 
     continue = e => {
         e.preventDefault();
-        this.props.getDataFromService();
-        this.props.nextStep()
+        if(this.props.values.age === 0){
+            this.props.setErrors('ageError');
+        } else if(!this.props.errors.ageError) {
+            this.props.nextStep()
+        }
     };
 
     back = e => {
@@ -20,7 +23,7 @@ class Age extends Component {
     };
 
     render() {
-        const {values, handleChange} = this.props;
+        const {errors, handleChange} = this.props;
         return (
             <MuiThemeProvider>
                 <Fragment>
@@ -33,9 +36,13 @@ class Age extends Component {
                             <h1 style={styles.header}>?מהו גילכם</h1>
                             <br/>
                             <div style={styles.input}>
-                                <TextField
+                                <CurrencyTextField
+                                    minimumValue="0"
+                                    maximumValue="120"
+                                    variant="standard"
+                                    currencySymbol=""
                                     onChange={handleChange('age')}
-                                    defaultValue={values.age}
+                                    helperText={errors.ageError ? 'נא הזינו גיל תקין': null}
                                 />
                             </div>
                             <br/>

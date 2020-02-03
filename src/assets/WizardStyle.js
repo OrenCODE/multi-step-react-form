@@ -67,4 +67,18 @@ export const styles = {
         height: '56px',
         backgroundColor: '#3F3D56',
     },
+    resultsSection: {
+        backgroundColor: 'white',
+        border: '2px solid #3F3D56',
+        display: 'grid',
+        justifyItems: 'center',
+        gridTemplateRows: 'auto'
+    },
+    resultsHeader: {
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifySelf: 'flex-end',
+        marginInlineEnd: '30px',
+        fontSize: 'larger'
+    }
 };

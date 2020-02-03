@@ -3,6 +3,7 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
+import CurrencyTextField from '@unicef/material-ui-currency-textfield'
 import {bannerImage} from '../assets';
 import {styles} from "../assets/WizardStyle";
 
@@ -10,7 +11,11 @@ class MonthlyIncome extends Component {
 
     continue = e => {
         e.preventDefault();
-        this.props.nextStep()
+        if(this.props.values.monthlyIncome === 0){
+            this.props.setErrors('monthlyIncomeError');
+        } else if(!this.props.errors.monthlyIncomeError) {
+            this.props.nextStep()
+        }
     };
 
     back = e => {
@@ -19,7 +24,7 @@ class MonthlyIncome extends Component {
     };
 
     render() {
-        const {values, handleChange} = this.props;
+        const {errors, handleChange} = this.props;
         return (
             <MuiThemeProvider>
                 <Fragment>
@@ -32,10 +37,13 @@ class MonthlyIncome extends Component {
                             <h1 style={styles.header}>?כמה כסף נכנס לכם לחשבון כל חודש</h1>
                             <br/>
                             <div style={styles.input}>
-                            <TextField
-                                onChange={handleChange('monthlyIncome')}
-                                defaultValue={values.monthlyIncome}
-                            />
+                                <CurrencyTextField
+                                    minimumValue="0"
+                                    variant="standard"
+                                    currencySymbol="₪"
+                                    onChange={handleChange('monthlyIncome')}
+                                    helperText={errors.monthlyIncomeError ? 'נא הזינו סכום בשקלים': null}
+                                />
                             </div>
                             <br/>
                             <div style={styles.purposeContainer}>

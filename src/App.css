@@ -9,6 +9,24 @@ input {
     text-align: right !important;
 }
 
-.MuiRaisedButton-contained {
-    background-color: red;
+.MuiInputBase-root {
+    background-color: white;
+    height: 56px;
+    padding: 8px;
+    border: 2px solid #3F3D56;
+    border-bottom: 1px solid #3F3D56;
+}
+
+.MuiInputBase-input {
+    font-size: 22px;
+}
+
+.MuiTypography-colorTextSecondary {
+    color: #3F3D56 !important;
+    font-size: 22px !important;
+}
+
+.MuiFormHelperText-root {
+    text-align: center !important;
+    color: red !important;
 }

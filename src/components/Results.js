@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar';
-import RaisedButton from 'material-ui/RaisedButton';
 import {styles} from "../assets/WizardStyle";
 import {bannerImage} from "../assets";
 
@@ -16,8 +15,8 @@ class Results extends Component {
                         <div style={styles.imageContainer}>
                             <img src={bannerImage}/>
                         </div>
-                        <div style={styles.welcomeSection}>
-                            <h3>:עפ״י מידע שמסרתם ותוצאות המודל, אתם יכולים לרכוש נכס בסכום של</h3>
+                        <div style={styles.resultsSection}>
+                            <div style={styles.resultsHeader}>:עפ״י מידע שמסרתם ותוצאות המודל, אתם יכולים לרכוש נכס בסכום של</div>
                             <h1>{results?.propertyPrice ?? ''}</h1>
                             <div style={columns}>
                                 <div style={cardContainer}>
