@@ -1,0 +1,21 @@
+.resultsHeader {
+    display: flex;
+    padding: 24px;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 17px;
+}
+
+.resultsInvestment {
+    display: grid;
+    align-items: flex-start;
+    justify-items: center;
+}
+
+.columns {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    height: 80px;
+    grid-template-columns: repeat(3, 1fr);
+}

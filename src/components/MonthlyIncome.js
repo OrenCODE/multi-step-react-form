@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
-import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 import CurrencyTextField from '@unicef/material-ui-currency-textfield'
 import {bannerImage} from '../assets';
@@ -30,11 +29,8 @@ class MonthlyIncome extends Component {
                 <Fragment>
                     <AppBar title="" style={styles.appBar}/>
                     <div style={styles.welcomeContainer}>
-                        <div style={styles.imageContainer}>
-                            <img src={bannerImage}/>
-                        </div>
                         <div style={styles.welcomeSection}>
-                            <h1 style={styles.header}>?כמה כסף נכנס לכם לחשבון כל חודש</h1>
+                            <div style={styles.header}>כמה כסף נכנס לכם לחשבון כל חודש ?</div>
                             <br/>
                             <div style={styles.input}>
                                 <CurrencyTextField
@@ -47,21 +43,24 @@ class MonthlyIncome extends Component {
                             </div>
                             <br/>
                             <div style={styles.purposeContainer}>
-                            <RaisedButton
+                                <RaisedButton
                                 label="חזור"
                                 labelStyle={styles.buttonColor}
                                 backgroundColor={'#3F3D56'}
                                 style={styles.button}
                                 onClick={this.back}
                             />
-                            <RaisedButton
-                                label="המשך"
-                                labelStyle={styles.buttonColor}
-                                backgroundColor={'#3F3D56'}
-                                style={styles.button}
-                                onClick={this.continue}
-                            />
+                                <RaisedButton
+                                    label="המשך"
+                                    labelStyle={styles.buttonColor}
+                                    backgroundColor={'#3F3D56'}
+                                    style={styles.button}
+                                    onClick={this.continue}
+                                />
                             </div>
+                        </div>
+                        <div style={styles.imageContainer}>
+                            <img src={bannerImage}/>
                         </div>
                     </div>
                 </Fragment>

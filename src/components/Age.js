@@ -29,11 +29,8 @@ class Age extends Component {
                 <Fragment>
                     <AppBar title="" style={styles.appBar}/>
                     <div style={styles.welcomeContainer}>
-                        <div style={styles.imageContainer}>
-                            <img src={bannerImage}/>
-                        </div>
                         <div style={styles.welcomeSection}>
-                            <h1 style={styles.header}>?מהו גילכם</h1>
+                            <div style={styles.header}>?מהו גילכם</div>
                             <br/>
                             <div style={styles.input}>
                                 <CurrencyTextField
@@ -62,6 +59,9 @@ class Age extends Component {
                                     onClick={this.continue}
                                 />
                             </div>
+                        </div>
+                        <div style={styles.imageContainer}>
+                            <img src={bannerImage}/>
                         </div>
                     </div>
                 </Fragment>

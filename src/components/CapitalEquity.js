@@ -29,11 +29,8 @@ class CapitalEquity extends Component {
                 <Fragment>
                     <AppBar title="" style={styles.appBar}/>
                     <div style={styles.welcomeContainer}>
-                        <div style={styles.imageContainer}>
-                            <img src={bannerImage}/>
-                        </div>
                         <div style={styles.welcomeSection}>
-                            <h1 style={styles.header}>?כמה הון עצמי יש לכם להשקיע</h1>
+                            <div style={styles.header}>כמה הון עצמי יש לכם להשקיע ?</div>
                             <br/>
                             <div style={styles.input}>
                                 <CurrencyTextField
@@ -45,7 +42,7 @@ class CapitalEquity extends Component {
                                 />
                             </div>
                             <br/>
-                            <div style={styles.purposeContainer}>
+                            <div style={styles.capitalEquity}>
                                 <RaisedButton
                                     label="חזור"
                                     labelStyle={styles.buttonColor}
@@ -62,15 +59,14 @@ class CapitalEquity extends Component {
                                 />
                             </div>
                         </div>
+                        <div style={styles.imageContainer}>
+                            <img src={bannerImage}/>
+                        </div>
                     </div>
                 </Fragment>
             </MuiThemeProvider>
         );
     }
 }
-
-const inputStyle = {
-    textAlign: 'right'
-};
 
 export default CapitalEquity;

@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    text-align: right;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F2F2F2;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.returnsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sectionCols {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.thCol {
+    text-align: center;
+    font-size: 18px;
+    color: #09B8E2;
+    opacity: 1;
+}
+
+.tdCol {
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tdColRegular {
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+}
+
+.yearX {
+    display: grid;
+    font-size: 40px;
+    font-weight: 700;
+    align-content: center;
+    justify-self: center;
+}

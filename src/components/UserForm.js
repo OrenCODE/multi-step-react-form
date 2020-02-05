@@ -10,7 +10,7 @@ import ResidentialHouseOwner from "./ResidentialHouseOwner";
 import Age from "./Age";
 import Results from './Results';
 import axios from 'axios'
-import Success from './Success';
+import ResultsSlider from "./ResultsSlider";
 
 class UserForm extends Component {
 
@@ -213,8 +213,16 @@ class UserForm extends Component {
                 );
             case 9:
                 return (
-                    <Results results={results}/>
+                    <Results
+                        results={results}
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                    />
                 );
+            // case 10:
+            //     return (
+            //         <ResultsSlider results={results}/>
+            //     );
         }
     }
 }

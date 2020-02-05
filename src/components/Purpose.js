@@ -19,11 +19,8 @@ class Purpose extends Component {
                 <Fragment>
                     <AppBar title="" style={styles.appBar}/>
                     <div style={styles.welcomeContainer}>
-                        <div style={styles.imageContainer}>
-                            <img src={bannerImage}/>
-                        </div>
                         <div style={styles.welcomeSection}>
-                            <h1 style={styles.header}>?לאיזו מטרה אתם מחפשים דירה</h1>
+                            <div style={styles.header}>לאיזו מטרה אתם מחפשים דירה?</div>
                             <br/>
                             <div style={styles.purposeContainer}>
                                 <RaisedButton
@@ -41,6 +38,9 @@ class Purpose extends Component {
                                     onClick={this.continue("investment")}
                                 />
                             </div>
+                        </div>
+                        <div style={styles.imageContainer}>
+                            <img src={bannerImage}/>
                         </div>
                     </div>
                 </Fragment>

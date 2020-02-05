@@ -29,11 +29,8 @@ class SumRegularPayments extends Component {
                 <Fragment>
                     <AppBar title="" style={styles.appBar}/>
                     <div style={styles.welcomeContainer}>
-                        <div style={styles.imageContainer}>
-                            <img src={bannerImage}/>
-                        </div>
                         <div style={styles.welcomeSection}>
-                            <h1 style={styles.header}>?כמה הוצאות קבועות יש לכם כל חודש</h1>
+                            <div style={styles.header}>כמה הוצאות קבועות יש לכם כל חודש ?</div>
                             <br/>
                             <div style={styles.input}>
                                 <CurrencyTextField
@@ -61,6 +58,9 @@ class SumRegularPayments extends Component {
                                     onClick={this.continue}
                                 />
                             </div>
+                        </div>
+                        <div style={styles.imageContainer}>
+                            <img src={bannerImage}/>
                         </div>
                     </div>
                 </Fragment>

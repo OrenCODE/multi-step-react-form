@@ -1,8 +1,11 @@
 .App {
+    direction: rtl;
     text-align: right;
     background-color: #09B8E2;
-    height: 650px;
-    overflow-y: hidden;
+    overflow-y: hidden; margin: 0;
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 input {
@@ -22,6 +25,7 @@ input {
 }
 
 .MuiTypography-colorTextSecondary {
+    justify-self: flex-end;
     color: #3F3D56 !important;
     font-size: 22px !important;
 }
@@ -29,4 +33,8 @@ input {
 .MuiFormHelperText-root {
     text-align: center !important;
     color: red !important;
+}
+
+.MuiInput-root {
+    direction: ltr !important;
 }

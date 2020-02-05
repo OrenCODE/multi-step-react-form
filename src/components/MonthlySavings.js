@@ -29,11 +29,8 @@ class MonthlySavings extends Component {
                 <Fragment>
                     <AppBar title="" style={styles.appBar}/>
                     <div style={styles.welcomeContainer}>
-                        <div style={styles.imageContainer}>
-                            <img src={bannerImage}/>
-                        </div>
                         <div style={styles.welcomeSection}>
-                            <h1 style={styles.header}>?כמה כסף נשאר לכם לחסכון כל חודש</h1>
+                            <div style={styles.header}>כמה כסף נשאר לכם לחסכון כל חודש ?</div>
                             <br/>
                             <div style={styles.input}>
                                 <CurrencyTextField
@@ -61,6 +58,9 @@ class MonthlySavings extends Component {
                                     onClick={this.continue}
                                 />
                             </div>
+                        </div>
+                        <div style={styles.imageContainer}>
+                            <img src={bannerImage}/>
                         </div>
                     </div>
                 </Fragment>

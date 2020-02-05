@@ -12,16 +12,12 @@ class Welcome extends Component {
         this.props.nextStep()
     };
 
-
     render() {
         return (
             <MuiThemeProvider>
                 <Fragment>
                     <AppBar title="" style={styles.appBar}/>
                     <div style={styles.welcomeContainer}>
-                        <div style={styles.imageContainer}>
-                            <img src={bannerImage}/>
-                        </div>
                         <div style={styles.welcomeSection}>
                             <h1 style={styles.header}>תנו לנו למצוא בשבילכם את השקעת הנדלן המתאימה לכם</h1>
                             <div style={styles.text}>ענו על 7 שאלות קצרות ותהפכו את השקעת הנדלן שלכם לחכמה, בטוחה ופשוטה
@@ -36,6 +32,9 @@ class Welcome extends Component {
                                     onClick={this.continue}
                                 />
                             </div>
+                        </div>
+                        <div style={styles.imageContainer}>
+                            <img src={bannerImage}/>
                         </div>
                     </div>
                 </Fragment>
